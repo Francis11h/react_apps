@@ -1,0 +1,43 @@
+React
+https://zh-hans.reactjs.org/docs/hello-world.html
+https://zh-hans.reactjs.org/tutorial/tutorial.html#before-we-start-the-tutorial
+
+https://reactjs.org/docs/hooks-intro.html
+https://usedapp.readthedocs.io/en/latest/getting-started.html
+https://www.html.cn/create-react-app/docs/adding-typescript/
+
+定义：声明式，高效且灵活的用于构建UI的 js 库
+使用 React 可以将一些简短、独立的代码片段组合成复杂的 UI 界面，这些代码片段被称作“组件”。
+
+
+组件React.Component 
+	简短独立的代码片段 可以理解为类？ 父组件 子组件
+
+	
+参数 props
+	一个组件接收一些参数，我们把这些参数叫做 props（“props” 是 “properties” 简写）
+		，然后通过 render() 方法返回需要展示在屏幕上的视图的层次结构。
+	
+状态state
+	‘记忆’
+
+	当你遇到需要同时获取多个子组件数据，或者两个组件之间需要相互通讯的情况时，
+	需要把子组件的 state 数据提升至其共同的父组件当中保存。
+	之后父组件可以通过 props 将状态数据传递到子组件当中。
+	这样应用当中所有组件的状态数据就能够更方便地同步共享了。
+
+
+函数组件
+	如果你想写的组件只包含一个 render() 方法，并且不包含 state，那么使用函数组件就会更简单。
+	即使用函数 代替类
+	
+
+
+key
+	每次只要你构建动态列表的时候，都要指定一个合适的 key
+	
+
+
+JSX 
+	可以使 语法 <div /> 会被编译成 React.createElement('div')
+
