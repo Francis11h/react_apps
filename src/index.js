@@ -146,10 +146,12 @@ class Game extends React.Component {
     );
   }
 
-  jumpTo(step) {
+  jumpTo(num) {
+    console.log('jumpTo + num:', num);
+
     this.setState({
-      stepNumber: step,
-      xIsNext: (step % 2) === 0,
+      stepNumber: num,
+      xIsNext: (num % 2) === 0,
       //==，equality -> 等同  的意思， 两边值类型不同的时候，要先进行类型转换为同一类型后，再比较值是否相等。 
       //===，identity -> 恒等 的意思，不做类型转换，类型不同的结果一定不等。
     });
@@ -157,6 +159,9 @@ class Game extends React.Component {
 
   handleClick(i) {
     // const history = this.state.history;
+
+    console.log('handleClick + i:', i);
+
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
