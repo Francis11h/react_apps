@@ -15,6 +15,7 @@
 const person = {
   name: ["Bob", "Smith"],
   age: 32,
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#arrow_functions_used_as_methods
   // bio: (name = ["Bob", "Smith"], age = 32) => {
   //   console.log(`${name[0]} ${name[1]} is ${age} years old.`);
   // },
