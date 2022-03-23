@@ -15,6 +15,9 @@
 const person = {
   name: ["Bob", "Smith"],
   age: 32,
+  // bio: (name = ["Bob", "Smith"], age = 32) => {
+  //   console.log(`${name[0]} ${name[1]} is ${age} years old.`);
+  // },
   bio() {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
@@ -23,11 +26,17 @@ const person = {
   },
 };
 
-// console.log(person.name);
-// console.log(person.name[0]);
-// console.log(person.age);
-// console.log(person.bio());
-// console.log(person.introduceSelf());
+console.log(person.name);
+console.log(person.name[0]);
+console.log(person.age);
+console.log(person.bio());
+console.log(person.introduceSelf());
+
+
+
+
+
+
 
 // Constructor
 function Person(name) {
