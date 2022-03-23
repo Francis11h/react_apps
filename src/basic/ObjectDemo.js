@@ -16,15 +16,45 @@ const person = {
   name: ["Bob", "Smith"],
   age: 32,
   bio() {
-      console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
   introduceSelf() {
     console.log(`Hi! I'm ${this.name[0]}.`);
   },
 };
 
-console.log(person.name);
-console.log(person.name[0]);
-console.log(person.age);
-console.log(person.bio());
-console.log(person.introduceSelf());
+// console.log(person.name);
+// console.log(person.name[0]);
+// console.log(person.age);
+// console.log(person.bio());
+// console.log(person.introduceSelf());
+
+// Constructor
+function Person(name) {
+  this.name = name;
+  this.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+}
+
+function Person2(
+  name,
+  age,
+  bio,
+  introduceSelf = () => {
+    console.log(`Hi! I'm ${name}.`);
+  }
+) {
+  this.name = name;
+  this.age = age;
+  this.bio = bio;
+  this.introduceSelf = introduceSelf;
+}
+
+const salva = new Person2("Salva");
+salva.name;
+salva.introduceSelf();
+
+const frankie = new Person2("Frankie");
+frankie.name;
+frankie.introduceSelf();
