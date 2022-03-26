@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from "react";
-import axios from "axios"; 
+import axios from "axios";
 
 class AxiosPersonListDemo extends Component {
   constructor(props) {
@@ -11,16 +11,16 @@ class AxiosPersonListDemo extends Component {
       list: [],
     };
   }
-  
+
   // Ajax请求放在componentDidMount生命周期内
   componentDidMount() {
     // 使用axios完成ajax数据请求
     axios
       .get(this.baseUrl)
       .then((res) => {
-        const goodlists = res.data;
+        const personlist = res.data;
         this.setState({
-          list: goodlists,
+          list: personlist,
         });
       })
       .catch((err) => {
@@ -35,9 +35,30 @@ class AxiosPersonListDemo extends Component {
         <ul>
           {list?.map((item) => {
             return (
-              <li key={item.id}>
-                {item.name}
-              </li>
+              <div key={item.id}>
+                <li>
+                  {item.name},{item.email},{item.phone},{item.website}
+                </li>
+                <ul>
+                  {[item.address].map((address) => {    //use [item.address] to convert item.address from map to array to use map method
+                    return (
+                      <div>
+                        <li key={address.zipcode}>
+                          {address.street},{address.suite},{address.zipcode},
+                          {address.city}
+                        </li>
+                        <ul>
+                          {[address.geo].map((geo) => (
+                            <li key={geo.lat}>
+                              {geo.lat}, {geo.lng}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </ul>
+              </div>
             );
           })}
         </ul>
