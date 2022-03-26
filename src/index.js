@@ -6,12 +6,16 @@ import UseEffectDemo from './useHooksDemo/UseEffectDemo'
 import UseContextDemo from './useHooksDemo/UseContextDemo'
 import DatePickerDemo from './antd-demo/DatePickerDemo'
 import AxiosPersonListDemo from'./axios/axiosPersonListDemo'
+import AxiosPersonAddDemo from'./axios/axiosPersonAddDemo'
 
 ReactDOM.render(
     // <Example />,
     // <UseEffectDemo />,
     // <UseContextDemo />,
     // <DatePickerDemo />,
-    <AxiosPersonListDemo />,
+    <div>
+      <AxiosPersonAddDemo />
+      <AxiosPersonListDemo />
+    </div>,
     document.getElementById('root')
   );
