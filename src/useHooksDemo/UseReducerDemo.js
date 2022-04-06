@@ -13,6 +13,7 @@ function reducer(state, action) {
 }
 
 function UseReducerDemo() {
+  // params 1.函数 2.初始值
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
