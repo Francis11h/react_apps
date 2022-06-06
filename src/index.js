@@ -12,12 +12,12 @@ import UseReducerDemo from'./useHooksDemo/UseReducerDemo'
 ReactDOM.render(
     // <Example />,
     // <UseEffectDemo />,
-    // <UseContextDemo />,
+    <UseContextDemo />,
     // <DatePickerDemo />,
     // <div>
     //   <AxiosPersonAddDemo />
     //   <AxiosPersonListDemo />
     // </div>,
-    <UseReducerDemo />,
+    // <UseReducerDemo />,
     document.getElementById('root')
   );
