@@ -6,7 +6,6 @@ import zhCN from 'antd/lib/locale/zh_CN';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
-import  styles from './datePicker.css';
 
 moment.locale('zh-cn');
 
