@@ -8,16 +8,18 @@ import DatePickerDemo from './antd-demo/DatePickerDemo'
 import AxiosPersonListDemo from'./axios/axiosPersonListDemo'
 import AxiosPersonAddDemo from'./axios/axiosPersonAddDemo'
 import UseReducerDemo from'./useHooksDemo/UseReducerDemo'
+import UseReducerLoginDemo from'./useHooksDemo/UseReducerLoginDemo'
 
 ReactDOM.render(
     // <Example />,
     // <UseEffectDemo />,
-    <UseContextDemo />,
+    // <UseContextDemo />,
     // <DatePickerDemo />,
     // <div>
     //   <AxiosPersonAddDemo />
     //   <AxiosPersonListDemo />
     // </div>,
     // <UseReducerDemo />,
+    <UseReducerLoginDemo />,
     document.getElementById('root')
   );
